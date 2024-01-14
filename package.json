@@ -12,7 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "three": "^0.115.0"
+    "three": "^0.115.0",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "prettier": "^2.0.4",
