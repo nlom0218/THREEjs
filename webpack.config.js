@@ -2,10 +2,21 @@ const path = require('path')
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.ts',
+  entry: './src/ex-01.ts',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.[jt]sx?$/,
+        loader: 'esbuild-loader',
+        options: {
+          target: 'es2015',
+        },
+      },
+    ],
   },
   performance: {
     maxEntrypointSize: 1024000,
